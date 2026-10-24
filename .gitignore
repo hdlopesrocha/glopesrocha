@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vite/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.local
+
+# The supplied CV contains historical contact details and is not part of the
+# public web build. Project imagery is included as optimised derivatives only.
+A3_CV_WORK_EN_2015_1.pdf
