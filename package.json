@@ -11,6 +11,7 @@
     "dev": "vite",
     "build": "vite build && node scripts/postbuild.mjs",
     "build:pages": "VITE_BASE=/glopesrocha/ npm run build",
+    "deploy:pages": "bash scripts/deploy-pages.sh",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

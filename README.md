@@ -65,7 +65,13 @@ The Vite base path must match the repository name:
 npm run build:pages
 ```
 
-This is equivalent to `VITE_BASE=/glopesrocha/ npm run build`. The resulting `dist/` is deployed to the `gh-pages` branch.
+This is equivalent to `VITE_BASE=/glopesrocha/ npm run build`. To rebuild and publish the result to the `gh-pages` branch in one step:
+
+```bash
+npm run deploy:pages
+```
+
+The deploy script uses the repository's `origin` remote and the locally configured Git author details.
 
 If the repository name or hosting location changes, update:
 
