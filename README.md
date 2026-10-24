@@ -6,11 +6,9 @@ The site is a Vue 3 single-page application with an editorial, asymmetric visual
 
 ## Live site
 
-After deployment to GitHub Pages:
-
 **https://hdlopesrocha.github.io/glopesrocha/**
 
-The production build is published from the `gh-pages` branch. The source is in `master`.
+The production build is published from the `gh-pages` branch. The source is in `master`. Direct project links use generated directory shells so GitHub Pages serves them without falling back to a missing route; the `404.html` shell remains as a final fallback.
 
 ## Features
 
@@ -26,7 +24,7 @@ The production build is published from the `gh-pages` branch. The source is in `
 - Source register at `/colophon`, including attribution notes, research discrepancies, image credits and unresolved items.
 - Intersection Observer reveal transitions, progressive image loading, image failure fallbacks and reduced-motion support.
 - SEO metadata, Open Graph/Twitter cards, generated social image, favicon, sitemap and robots file.
-- GitHub Pages SPA fallback via `dist/404.html`.
+- GitHub Pages SPA support via per-route directory shells and `dist/404.html`.
 
 ## Technology
 
@@ -57,7 +55,7 @@ npm run build
 npm run preview
 ```
 
-The postbuild step writes `dist/404.html` (SPA fallback) and `dist/.nojekyll` (GitHub Pages).
+The postbuild step writes `dist/404.html` (SPA fallback), `dist/.nojekyll` (GitHub Pages) and directory shells for every project route plus `/colophon/`.
 
 ## GitHub Pages deployment
 
